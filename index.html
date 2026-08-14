@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Sodré — code, motion & AI in public</title>
+<meta name="description" content="Code, motion and AI in public — method, not hype. Benchmarks, tools and 3D experiments by @ovictor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0A0F;
+    --panel: #101018;
+    --line: rgba(255,255,255,0.07);
+    --text: #EDF0F5;
+    --mute: #8B93A3;
+    --cyan: #22D3EE;
+    --violet: #7C3AED;
+    --r: 3px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 88px 32px 64px; }
+  .kicker {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 13px; letter-spacing: 3px; color: var(--cyan);
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 52px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05;
+  }
+  .tag { margin-top: 16px; font-size: 19px; color: var(--mute); max-width: 560px; line-height: 1.55; }
+  .tag b { color: var(--text); font-weight: 600; }
+  .links { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .links a {
+    font-family: 'Space Grotesk', sans-serif; font-size: 14px; letter-spacing: 0.5px;
+    color: var(--text); text-decoration: none;
+    border: 1px solid var(--line); border-radius: var(--r);
+    padding: 9px 16px; transition: border-color .15s, transform .15s;
+    background: var(--panel);
+    box-shadow: -6px 6px 18px rgba(0,0,0,.35), 6px -6px 18px rgba(255,255,255,.015);
+  }
+  .links a:hover { border-color: var(--cyan); transform: translateY(-1px); }
+  .rule {
+    height: 2px; margin: 56px 0 44px;
+    background: linear-gradient(90deg, var(--cyan), var(--violet));
+    border-radius: 999px; opacity: .85;
+  }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500;
+    letter-spacing: 3px; color: var(--mute); text-transform: uppercase; margin-bottom: 24px;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .card {
+    position: relative;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 24px 22px 20px;
+    text-decoration: none; color: var(--text);
+    transition: transform .15s;
+    box-shadow: -8px 8px 22px rgba(0,0,0,.4), 8px -8px 22px rgba(255,255,255,.015);
+  }
+  .card::before {
+    content: ''; position: absolute; inset: 0; border-radius: var(--r);
+    padding: 1px; opacity: 0; transition: opacity .15s;
+    background: linear-gradient(135deg, var(--cyan), var(--violet));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card:hover::before { opacity: 1; }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 700; }
+  .card p { margin-top: 10px; font-size: 14.5px; color: var(--mute); line-height: 1.55; }
+  .card .go {
+    margin-top: 16px; font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px; letter-spacing: 1px; color: var(--cyan);
+  }
+  footer { margin-top: 72px; font-size: 13px; color: var(--mute); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer a { color: var(--mute); }
+  @media (max-width: 560px) { h1 { font-size: 38px; } .wrap { padding-top: 64px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">victorsodre.github.io</div>
+  <h1>Victor Sodré</h1>
+  <p class="tag">Code, motion and AI in public — <b>method, not hype</b>. Scenography-grade 3D, agent pipelines and verifiable benchmarks, shipped daily on <b>@ovictor</b>.</p>
+  <div class="links">
+    <a href="https://x.com/ovictor">𝕏 @ovictor</a>
+    <a href="https://github.com/victorsodre">GitHub</a>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Public work</h2>
+  <div class="grid">
+    <a class="card" href="https://victorsodre.github.io/foryou-composer/">
+      <h3>ForYou Composer</h3>
+      <p>Type a post, watch its For You score react live — weights verified from the open-source X algorithm. Ships with an agent skill that scores and rewrites.</p>
+      <div class="go">OPEN LIVE DEMO →</div>
+    </a>
+    <a class="card" href="https://victorsodre.github.io/threejs-bench/">
+      <h3>threejs-bench</h3>
+      <p>One prompt, several AI models, zero hand-editing. One-shot Three.js scenes you can run — and judge — in your own browser.</p>
+      <div class="go">RUN THE BENCHMARKS →</div>
+    </a>
+    <a class="card" href="https://github.com/victorsodre/">
+      <h3></h3>
+      <p>A Remotion video catalog built for AI agents — programmatic motion as a content pipeline, documented for machines first.</p>
+      <div class="go">VIEW THE CODE →</div>
+    </a>
+  </div>
+
+  <footer>
+    <span>Vitória/ES, Brazil · building in public</span>
+    <span>weights, benches & renders: all verifiable</span>
+  </footer>
+</div>
+</body>
+</html>
