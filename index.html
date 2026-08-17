@@ -149,10 +149,13 @@
 
   .stage-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 14px;
   }
-  .stage-grid .card:first-child { grid-row: span 2; min-height: 280px; }
+  .stage-grid .card:first-child {
+    grid-column: 1 / -1;
+    min-height: 220px;
+  }
 
   .card {
     position: relative;
@@ -228,7 +231,7 @@
 
   @media (max-width: 780px) {
     .hero { margin-top: 48px; }
-    .stage-grid, .stage-grid .card:first-child { grid-template-columns: 1fr; grid-row: auto; }
+    .stage-grid .card:first-child { min-height: 0; }
     .floor { opacity: .28; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -261,9 +264,41 @@
 
   <div class="section-head">
     <h2>Public work</h2>
-    <div class="sync" id="sync" data-state="loading">syncing from GitHub…</div>
+    <div class="sync" id="sync" data-state="fallback">4 sets · index</div>
   </div>
-  <div class="stage-grid" id="work"></div>
+  <div class="stage-grid" id="work">
+    <a class="card" href="https://github.com/victorsodre/remotion-agent-catalog">
+      <div class="meta">
+        <span>01 · <span class="badge">New</span></span>
+        <span>repo</span>
+      </div>
+      <h3>remotion-agent-catalog</h3>
+      <p>A camada que falta entre um agente e um projeto Remotion: o que já existe pronto, e onde isso quebra.</p>
+      <div class="topics"><span>agent-skills</span><span>ai-agents</span><span>remotion</span><span>video-as-code</span></div>
+      <div class="go">Read the catalog →</div>
+    </a>
+    <a class="card" href="https://victorsodre.github.io/threejs-bench/">
+      <div class="meta"><span>02 · 16 Aug</span><span>live</span></div>
+      <h3>threejs-bench</h3>
+      <p>One prompt, several AI models, zero hand-editing. One-shot Three.js scenes you can run — and judge — in your own browser.</p>
+      <div class="topics"><span>ai-benchmark</span><span>one-shot</span><span>threejs</span><span>webgl</span></div>
+      <div class="go">Run the benchmarks →</div>
+    </a>
+    <a class="card" href="https://victorsodre.github.io/foryou-composer/">
+      <div class="meta"><span>03 · 14 Aug</span><span>live</span></div>
+      <h3>foryou-composer</h3>
+      <p>Type a post, watch its For You score react live — weights verified from the open-source X algorithm. Ships with an agent skill that scores and rewrites.</p>
+      <div class="topics"><span>agent-skills</span><span>for-you</span><span>x-algorithm</span></div>
+      <div class="go">Open live demo →</div>
+    </a>
+    <a class="card" href="https://github.com/victorsodre/catalog-agent-thread">
+      <div class="meta"><span>04 · 10 Aug</span><span>repo</span></div>
+      <h3>catalog-agent-thread</h3>
+      <p>A Remotion video catalog built for AI agents — programmatic motion as a content pipeline, documented for machines first.</p>
+      <div class="topics"><span>agents</span><span>remotion</span><span>video</span></div>
+      <div class="go">View the code →</div>
+    </a>
+  </div>
 
   <footer>
     <span>weights, benches &amp; renders: all verifiable</span>
