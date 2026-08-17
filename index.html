@@ -32,6 +32,8 @@
     --text-xl: 1.3125rem;
     --text-2xl: 1.625rem;
     --text-3xl: clamp(2rem, 4.2vw, 2.75rem);
+    --avatar: 104px;
+    --hero-gap: 28px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { min-height: 100%; }
@@ -118,23 +120,23 @@
   }
   .lang svg { display: block; width: 22px; height: 15px; border-radius: 1px; }
 
-  .hero { margin-top: 48px; }
-  .hero-row {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 24px 32px;
+  .hero { margin-top: 48px; max-width: 680px; }
+  .hero-head {
+    display: flex;
     align-items: center;
-    max-width: 720px;
+    gap: var(--hero-gap);
   }
   .avatar-wrap {
-    position: relative; width: clamp(88px, 14vw, 112px);
-    aspect-ratio: 1;
+    position: relative;
+    width: var(--avatar);
+    height: var(--avatar);
+    flex: 0 0 var(--avatar);
   }
   .avatar-wrap::before {
     content: "";
-    position: absolute; inset: -3px;
+    position: absolute; inset: -2px;
     background: linear-gradient(135deg, var(--gel), var(--led), var(--tungsten));
-    opacity: .55;
+    opacity: .5;
   }
   .avatar {
     position: relative; width: 100%; height: 100%;
@@ -142,20 +144,26 @@
     border: 2px solid var(--stage);
     filter: contrast(1.05) saturate(1.08);
   }
+  .hero-name { flex: 1; min-width: 0; }
   h1 {
     font-family: var(--sans);
     font-size: var(--text-3xl);
-    font-weight: 700; letter-spacing: -0.022em; line-height: 1.12;
+    font-weight: 700; letter-spacing: -0.022em; line-height: 1.08;
+    margin: 0;
   }
   h1 .line { display: block; }
   h1 .accent { color: var(--tungsten); }
+  .hero-body {
+    margin-top: 20px;
+    padding-left: calc(var(--avatar) + var(--hero-gap));
+  }
   .tag {
-    margin-top: 16px; font-size: var(--text-lg); font-weight: 400; line-height: 1.65;
-    color: var(--mute); max-width: 520px;
+    margin-top: 0; font-size: var(--text-lg); font-weight: 400; line-height: 1.65;
+    color: var(--mute); max-width: 100%;
   }
   .tag b { color: var(--ink); font-weight: 600; }
 
-  .links { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .links { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
   .links a {
     font-family: var(--mono);
     font-size: var(--text-sm); font-weight: 500; letter-spacing: 0.06em;
@@ -275,8 +283,9 @@
   }
 
   @media (max-width: 780px) {
-    .hero-row { grid-template-columns: 1fr; }
-    .avatar-wrap { width: 96px; }
+    :root { --avatar: 88px; --hero-gap: 20px; }
+    .hero { max-width: none; }
+    .hero-body { padding-left: 0; margin-top: 18px; }
     .stage-grid .card:first-child { min-height: 0; }
     .floor { opacity: .28; }
     header.slate { align-items: flex-start; }
@@ -307,17 +316,19 @@
   </header>
 
   <section class="hero">
-    <div class="hero-row">
+    <div class="hero-head">
       <div class="avatar-wrap">
-        <img class="avatar" src="assets/avatar.jpg" alt="Victor Sodré" width="112" height="112">
+        <img class="avatar" src="assets/avatar.jpg" alt="Victor Sodré" width="104" height="104">
       </div>
-      <div>
+      <div class="hero-name">
         <h1><span class="line">Victor</span><span class="line accent">Sodré</span></h1>
-        <p class="tag" data-i18n="hero.tag">Scenography-grade 3D, agent pipelines and verifiable benchmarks — <b>method, not hype</b>. Shipped daily on <b>@ovictor</b>.</p>
-        <div class="links">
-          <a href="https://x.com/ovictor">𝕏 @ovictor</a>
-          <a href="https://github.com/victorsodre">GitHub</a>
-        </div>
+      </div>
+    </div>
+    <div class="hero-body">
+      <p class="tag" data-i18n="hero.tag">Scenography-grade 3D, agent pipelines and verifiable benchmarks — <b>method, not hype</b>. Shipped daily on <b>@ovictor</b>.</p>
+      <div class="links">
+        <a href="https://x.com/ovictor">𝕏 @ovictor</a>
+        <a href="https://github.com/victorsodre">GitHub</a>
       </div>
     </div>
   </section>
