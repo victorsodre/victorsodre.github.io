@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#08070c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --stage: #08070c;
@@ -30,6 +30,7 @@
     background: var(--stage);
     color: var(--ink);
     font-family: Outfit, system-ui, sans-serif;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -82,37 +83,70 @@
   }
 
   header.slate {
-    display: flex; justify-content: space-between; align-items: baseline;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--mute);
   }
-  header.slate b { color: var(--tungsten); font-weight: 500; }
+  header.slate b { color: var(--tungsten); font-weight: 600; }
 
-  .hero { margin-top: 72px; max-width: 820px; }
-  .hero .scene {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--led); margin-bottom: 18px;
+  .lang {
+    display: flex; gap: 6px; margin-left: auto;
+  }
+  .lang button {
+    appearance: none; border: 1px solid var(--line);
+    background: rgba(8,7,12,.55); padding: 6px 8px;
+    cursor: pointer; line-height: 0;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .lang button:hover { border-color: rgba(232,168,124,.45); transform: translateY(-1px); }
+  .lang button[aria-pressed="true"] {
+    border-color: var(--tungsten);
+    box-shadow: 0 0 0 1px rgba(232,168,124,.25);
+  }
+  .lang svg { display: block; width: 22px; height: 15px; border-radius: 1px; }
+
+  .hero { margin-top: 56px; }
+  .hero-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px 36px;
+    align-items: center;
+    max-width: 900px;
+  }
+  .avatar-wrap {
+    position: relative; width: clamp(96px, 16vw, 132px);
+    aspect-ratio: 1;
+  }
+  .avatar-wrap::before {
+    content: "";
+    position: absolute; inset: -3px;
+    background: linear-gradient(135deg, var(--gel), var(--led), var(--tungsten));
+    opacity: .55;
+  }
+  .avatar {
+    position: relative; width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    border: 2px solid var(--stage);
+    filter: contrast(1.05) saturate(1.08);
   }
   h1 {
-    font-family: "Instrument Serif", Georgia, serif;
-    font-size: clamp(52px, 9vw, 104px);
-    font-weight: 400; letter-spacing: -0.03em; line-height: 0.92;
+    font-family: Syne, system-ui, sans-serif;
+    font-size: clamp(44px, 8vw, 88px);
+    font-weight: 800; letter-spacing: -0.03em; line-height: 0.95;
   }
-  h1 em {
-    font-style: italic; color: var(--tungsten);
-  }
+  h1 span { color: var(--tungsten); }
   .tag {
-    margin-top: 22px; font-size: 18px; line-height: 1.55;
+    margin-top: 18px; font-size: 18px; font-weight: 500; line-height: 1.55;
     color: var(--mute); max-width: 560px;
   }
-  .tag b { color: var(--ink); font-weight: 500; }
+  .tag b { color: var(--ink); font-weight: 700; }
 
-  .links { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .links { margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap; }
   .links a {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px; letter-spacing: 0.08em;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
     color: var(--ink); text-decoration: none;
     border: 1px solid var(--line); padding: 10px 14px;
     background: rgba(8,7,12,.45);
@@ -121,7 +155,7 @@
   .links a:hover { border-color: var(--tungsten); color: var(--tungsten); transform: translateY(-1px); }
 
   .rule {
-    height: 1px; margin: 64px 0 36px;
+    height: 1px; margin: 56px 0 32px;
     background: linear-gradient(90deg, var(--tungsten), var(--gel), var(--led));
     opacity: .7;
   }
@@ -132,12 +166,12 @@
   }
   h2 {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px; font-weight: 500; letter-spacing: 0.28em;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.28em;
     text-transform: uppercase; color: var(--mute);
   }
   .sync {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--mute);
   }
   .sync[data-state="live"] { color: var(--led); }
@@ -154,7 +188,7 @@
   }
   .stage-grid .card:first-child {
     grid-column: 1 / -1;
-    min-height: 220px;
+    min-height: 200px;
   }
 
   .card {
@@ -165,7 +199,7 @@
     background: linear-gradient(180deg, rgba(243,238,230,.035), rgba(243,238,230,.012));
     padding: 26px 24px 22px;
     overflow: hidden;
-    transition: transform .2s, border-color .2s, background .2s;
+    transition: transform .2s, border-color .2s;
   }
   .card::after {
     content: "";
@@ -179,20 +213,20 @@
   .card .meta {
     display: flex; justify-content: space-between; align-items: center;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--mute); margin-bottom: 18px;
   }
   .badge {
     color: var(--stage); background: var(--tungsten);
-    padding: 3px 7px; letter-spacing: 0.14em; font-weight: 500;
+    padding: 3px 7px; letter-spacing: 0.14em; font-weight: 600;
   }
   .card h3 {
-    font-family: "Instrument Serif", Georgia, serif;
-    font-size: 32px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05;
+    font-family: Syne, system-ui, sans-serif;
+    font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05;
   }
-  .stage-grid .card:first-child h3 { font-size: clamp(36px, 4vw, 48px); }
+  .stage-grid .card:first-child h3 { font-size: clamp(32px, 4vw, 44px); }
   .card p {
-    margin-top: 12px; font-size: 15px; line-height: 1.55; color: var(--mute);
+    margin-top: 12px; font-size: 15px; font-weight: 500; line-height: 1.55; color: var(--mute);
     flex: 1;
   }
   .topics {
@@ -200,29 +234,28 @@
   }
   .topics span {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--mute); border: 1px solid var(--line); padding: 4px 7px;
   }
   .go {
     margin-top: 20px;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--tungsten);
   }
 
-  .empty, .error {
+  .empty {
     border: 1px dashed var(--line); padding: 28px;
-    color: var(--mute); font-size: 15px;
+    color: var(--mute); font-size: 15px; font-weight: 500;
   }
 
   footer {
     margin-top: 64px;
     display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--mute);
   }
-  footer a { color: var(--mute); }
 
   @keyframes scan {
     from { transform: translateX(-30%); }
@@ -230,12 +263,15 @@
   }
 
   @media (max-width: 780px) {
-    .hero { margin-top: 48px; }
+    .hero-row { grid-template-columns: 1fr; }
+    .avatar-wrap { width: 96px; }
     .stage-grid .card:first-child { min-height: 0; }
     .floor { opacity: .28; }
+    header.slate { align-items: flex-start; }
+    .lang { margin-left: 0; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .wall::after, .card, .links a { animation: none; transition: none; }
+    .wall::after, .card, .links a, .lang button { animation: none; transition: none; }
   }
 </style>
 </head>
@@ -247,86 +283,135 @@
 <div class="wrap">
   <header class="slate">
     <span><b>HUB</b> · victorsodre.github.io</span>
-    <span>Vitória/ES · building in public</span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true" aria-label="English" title="English">
+        <svg viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#b22234"/><path d="M0 1.15h22M0 3.46h22M0 5.77h22M0 8.08h22M0 10.38h22M0 12.69h22" stroke="#fff" stroke-width="1.15"/><rect width="9.5" height="8.08" fill="#3c3b6e"/><g fill="#fff"><circle cx="1.2" cy="1" r=".35"/><circle cx="2.6" cy="1" r=".35"/><circle cx="4" cy="1" r=".35"/><circle cx="5.4" cy="1" r=".35"/><circle cx="6.8" cy="1" r=".35"/><circle cx="8.2" cy="1" r=".35"/><circle cx="1.9" cy="2.3" r=".35"/><circle cx="3.3" cy="2.3" r=".35"/><circle cx="4.7" cy="2.3" r=".35"/><circle cx="6.1" cy="2.3" r=".35"/><circle cx="7.5" cy="2.3" r=".35"/></g></svg>
+      </button>
+      <button type="button" id="lang-pt" aria-pressed="false" aria-label="Português" title="Português">
+        <svg viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#009b3a"/><polygon points="11,1.2 20.2,7.5 11,13.8 1.8,7.5" fill="#ffdf00"/><circle cx="11" cy="7.5" r="3.2" fill="#002776"/></svg>
+      </button>
+    </div>
+    <span data-i18n="header.location">Vitória/ES · building in public</span>
   </header>
 
   <section class="hero">
-    <div class="scene">Scene 01 — code, motion &amp; AI</div>
-    <h1>Victor <em>Sodré</em></h1>
-    <p class="tag">Scenography-grade 3D, agent pipelines and verifiable benchmarks — <b>method, not hype</b>. Shipped daily on <b>@ovictor</b>.</p>
-    <div class="links">
-      <a href="https://x.com/ovictor">𝕏 @ovictor</a>
-      <a href="https://github.com/victorsodre">GitHub</a>
+    <div class="hero-row">
+      <div class="avatar-wrap">
+        <img class="avatar" src="assets/avatar.jpg" alt="Victor Sodré" width="132" height="132">
+      </div>
+      <div>
+        <h1>Victor <span>Sodré</span></h1>
+        <p class="tag" data-i18n="hero.tag">Scenography-grade 3D, agent pipelines and verifiable benchmarks — <b>method, not hype</b>. Shipped daily on <b>@ovictor</b>.</p>
+        <div class="links">
+          <a href="https://x.com/ovictor">𝕏 @ovictor</a>
+          <a href="https://github.com/victorsodre">GitHub</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <div class="rule"></div>
 
   <div class="section-head">
-    <h2>Public work</h2>
+    <h2 data-i18n="section.title">Public work</h2>
     <div class="sync" id="sync" data-state="fallback">4 sets · index</div>
   </div>
-  <div class="stage-grid" id="work">
-    <a class="card" href="https://github.com/victorsodre/remotion-agent-catalog">
-      <div class="meta">
-        <span>01 · <span class="badge">New</span></span>
-        <span>repo</span>
-      </div>
-      <h3>remotion-agent-catalog</h3>
-      <p>A camada que falta entre um agente e um projeto Remotion: o que já existe pronto, e onde isso quebra.</p>
-      <div class="topics"><span>agent-skills</span><span>ai-agents</span><span>remotion</span><span>video-as-code</span></div>
-      <div class="go">Read the catalog →</div>
-    </a>
-    <a class="card" href="https://victorsodre.github.io/threejs-bench/">
-      <div class="meta"><span>02 · 16 Aug</span><span>live</span></div>
-      <h3>threejs-bench</h3>
-      <p>One prompt, several AI models, zero hand-editing. One-shot Three.js scenes you can run — and judge — in your own browser.</p>
-      <div class="topics"><span>ai-benchmark</span><span>one-shot</span><span>threejs</span><span>webgl</span></div>
-      <div class="go">Run the benchmarks →</div>
-    </a>
-    <a class="card" href="https://victorsodre.github.io/foryou-composer/">
-      <div class="meta"><span>03 · 14 Aug</span><span>live</span></div>
-      <h3>foryou-composer</h3>
-      <p>Type a post, watch its For You score react live — weights verified from the open-source X algorithm. Ships with an agent skill that scores and rewrites.</p>
-      <div class="topics"><span>agent-skills</span><span>for-you</span><span>x-algorithm</span></div>
-      <div class="go">Open live demo →</div>
-    </a>
-    <a class="card" href="https://github.com/victorsodre/catalog-agent-thread">
-      <div class="meta"><span>04 · 10 Aug</span><span>repo</span></div>
-      <h3>catalog-agent-thread</h3>
-      <p>A Remotion video catalog built for AI agents — programmatic motion as a content pipeline, documented for machines first.</p>
-      <div class="topics"><span>agents</span><span>remotion</span><span>video</span></div>
-      <div class="go">View the code →</div>
-    </a>
-  </div>
+  <div class="stage-grid" id="work"></div>
 
   <footer>
-    <span>weights, benches &amp; renders: all verifiable</span>
-    <span>live index · public repos on GitHub</span>
+    <span data-i18n="footer.left">weights, benches &amp; renders: all verifiable</span>
+    <span data-i18n="footer.right">live index · public repos on GitHub</span>
   </footer>
 </div>
 
 <script>
   const USER = "victorsodre";
   const HUB = "victorsodre.github.io";
-  const NOTES = {
-    "foryou-composer": {
-      blurb: "Type a post, watch its For You score react live — weights verified from the open-source X algorithm. Ships with an agent skill that scores and rewrites.",
-      cta: "Open live demo"
+  const LANG_KEY = "vs-lang";
+
+  const I18N = {
+    en: {
+      htmlLang: "en",
+      title: "Victor Sodré — code, motion & AI in public",
+      description: "Code, motion and AI in public — method, not hype. Benchmarks, tools and 3D experiments by @ovictor.",
+      strings: {
+        "header.location": "Vitória/ES · building in public",
+        "hero.tag": "Scenography-grade 3D, agent pipelines and verifiable benchmarks — <b>method, not hype</b>. Shipped daily on <b>@ovictor</b>.",
+        "section.title": "Public work",
+        "footer.left": "weights, benches & renders: all verifiable",
+        "footer.right": "live index · public repos on GitHub",
+        "badge.new": "New",
+        "type.live": "live",
+        "type.repo": "repo",
+        "sync.index": "index",
+        "sync.live": "live from GitHub",
+        "sync.cached": "cached index",
+        "sync.sets": "sets",
+        "empty": "No public sets yet.",
+        "cta.live": "Open live demo",
+        "cta.repo": "View the code"
+      },
+      notes: {
+        "foryou-composer": {
+          blurb: "Type a post, watch its For You score react live — weights verified from the open-source X algorithm. Ships with an agent skill that scores and rewrites.",
+          cta: "Open live demo"
+        },
+        "threejs-bench": {
+          blurb: "One prompt, several AI models, zero hand-editing. One-shot Three.js scenes you can run — and judge — in your own browser.",
+          cta: "Run the benchmarks"
+        },
+        "catalog-agent-thread": {
+          blurb: "A Remotion video catalog built for AI agents — programmatic motion as a content pipeline, documented for machines first.",
+          cta: "View the code"
+        },
+        "remotion-agent-catalog": {
+          blurb: "The missing layer between an agent and a real Remotion project — what already exists, and where it breaks.",
+          cta: "Read the catalog"
+        }
+      }
     },
-    "threejs-bench": {
-      blurb: "One prompt, several AI models, zero hand-editing. One-shot Three.js scenes you can run — and judge — in your own browser.",
-      cta: "Run the benchmarks"
-    },
-    "catalog-agent-thread": {
-      blurb: "A Remotion video catalog built for AI agents — programmatic motion as a content pipeline, documented for machines first.",
-      cta: "View the code"
-    },
-    "remotion-agent-catalog": {
-      blurb: "A camada que falta entre um agente e um projeto Remotion: o que já existe pronto, e onde isso quebra.",
-      cta: "Read the catalog"
+    pt: {
+      htmlLang: "pt-BR",
+      title: "Victor Sodré — código, motion e IA em público",
+      description: "Código, motion e IA em público — método, não hype. Benchmarks, ferramentas e experimentos 3D por @ovictor.",
+      strings: {
+        "header.location": "Vitória/ES · construindo em público",
+        "hero.tag": "3D de cenografia, pipelines de agentes e benchmarks verificáveis — <b>método, não hype</b>. Publicado todo dia no <b>@ovictor</b>.",
+        "section.title": "Trabalho público",
+        "footer.left": "pesos, benches e renders: tudo verificável",
+        "footer.right": "índice ao vivo · repos públicos no GitHub",
+        "badge.new": "Novo",
+        "type.live": "ao vivo",
+        "type.repo": "repo",
+        "sync.index": "índice",
+        "sync.live": "ao vivo do GitHub",
+        "sync.cached": "índice em cache",
+        "sync.sets": "sets",
+        "empty": "Nenhum set público ainda.",
+        "cta.live": "Abrir demo ao vivo",
+        "cta.repo": "Ver o código"
+      },
+      notes: {
+        "foryou-composer": {
+          blurb: "Digite um post e veja o score For You reagir ao vivo — pesos verificados no algoritmo open-source do X. Inclui uma agent skill que pontua e reescreve.",
+          cta: "Abrir demo ao vivo"
+        },
+        "threejs-bench": {
+          blurb: "Um prompt, vários modelos de IA, zero edição manual. Cenas Three.js one-shot para rodar — e julgar — no seu browser.",
+          cta: "Rodar os benchmarks"
+        },
+        "catalog-agent-thread": {
+          blurb: "Catálogo de vídeo Remotion feito para agentes de IA — motion programático como pipeline de conteúdo, documentado para máquinas primeiro.",
+          cta: "Ver o código"
+        },
+        "remotion-agent-catalog": {
+          blurb: "A camada que falta entre um agente e um projeto Remotion de verdade — o que já existe pronto, e onde isso quebra.",
+          cta: "Ler o catálogo"
+        }
+      }
     }
   };
+
   const FALLBACK = [
     {
       name: "remotion-agent-catalog",
@@ -370,8 +455,17 @@
     }
   ];
 
+  let lang = localStorage.getItem(LANG_KEY) || "en";
+  let repos = FALLBACK;
+  let syncSource = "fallback";
+
   const work = document.getElementById("work");
   const sync = document.getElementById("sync");
+  const btnEn = document.getElementById("lang-en");
+  const btnPt = document.getElementById("lang-pt");
+
+  const t = (key) => I18N[lang].strings[key] || key;
+  const noteFor = (name) => I18N[lang].notes[name] || {};
 
   const esc = (s) => String(s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -388,62 +482,87 @@
   }
 
   function when(iso) {
-    const d = new Date(iso);
-    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+    const locale = lang === "pt" ? "pt-BR" : "en-GB";
+    return new Date(iso).toLocaleDateString(locale, { day: "numeric", month: "short" });
   }
 
   function card(repo, i) {
-    const note = NOTES[repo.name] || {};
-    const blurb = note.blurb || repo.description || "Public experiment.";
+    const note = noteFor(repo.name);
+    const blurb = note.blurb || repo.description || t("empty");
     const live = /github\.io/i.test(repo.homepage || "");
-    const cta = note.cta || (live ? "Open live demo" : "View the code");
+    const cta = note.cta || (live ? t("cta.live") : t("cta.repo"));
     const topics = (repo.topics || []).slice(0, 4);
     const fresh = isNew(repo.created_at);
     return `
       <a class="card" href="${esc(hrefFor(repo))}">
         <div class="meta">
-          <span>${String(i + 1).padStart(2, "0")} · ${fresh ? '<span class="badge">New</span>' : when(repo.pushed_at)}</span>
-          <span>${live ? "live" : "repo"}</span>
+          <span>${String(i + 1).padStart(2, "0")} · ${fresh ? `<span class="badge">${esc(t("badge.new"))}</span>` : when(repo.pushed_at)}</span>
+          <span>${live ? esc(t("type.live")) : esc(t("type.repo"))}</span>
         </div>
         <h3>${esc(repo.name)}</h3>
         <p>${esc(blurb)}</p>
-        ${topics.length ? `<div class="topics">${topics.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+        ${topics.length ? `<div class="topics">${topics.map(topic => `<span>${esc(topic)}</span>`).join("")}</div>` : ""}
         <div class="go">${esc(cta)} →</div>
       </a>`;
   }
 
-  function render(repos, source) {
+  function renderCards() {
     const list = repos
       .filter(r => !r.fork && !r.archived && r.name !== HUB)
       .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
-    work.innerHTML = list.map(card).join("") || `<div class="empty">No public sets yet.</div>`;
-    sync.dataset.state = source === "live" ? "live" : "fallback";
-    sync.textContent = source === "live"
-      ? `${list.length} sets · live from GitHub`
-      : `${list.length} sets · cached index`;
+    work.innerHTML = list.map(card).join("") || `<div class="empty">${esc(t("empty"))}</div>`;
+    sync.dataset.state = syncSource === "live" ? "live" : "fallback";
+    const label = syncSource === "live" ? t("sync.live") : t("sync.cached");
+    sync.textContent = `${list.length} ${t("sync.sets")} · ${label}`;
   }
 
-  async function load() {
+  function applyLang(next) {
+    lang = next;
+    localStorage.setItem(LANG_KEY, lang);
+    const pack = I18N[lang];
+    document.documentElement.lang = pack.htmlLang;
+    document.title = pack.title;
+    document.querySelector('meta[name="description"]').content = pack.description;
+    document.querySelector('meta[property="og:title"]').content = pack.title;
+    document.querySelector('meta[property="og:description"]').content = pack.description;
+    btnEn.setAttribute("aria-pressed", lang === "en");
+    btnPt.setAttribute("aria-pressed", lang === "pt");
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      el.innerHTML = pack.strings[el.dataset.i18n];
+    });
+    renderCards();
+  }
+
+  btnEn.addEventListener("click", () => applyLang("en"));
+  btnPt.addEventListener("click", () => applyLang("pt"));
+
+  async function loadRepos() {
     try {
       const cached = sessionStorage.getItem("vs-repos");
       if (cached) {
         const { at, data } = JSON.parse(cached);
         if (Date.now() - at < 15 * 60 * 1000) {
-          render(data, "live");
+          repos = data;
+          syncSource = "live";
+          renderCards();
           return;
         }
       }
       const res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`);
       if (!res.ok) throw new Error(res.status);
-      const data = await res.json();
-      sessionStorage.setItem("vs-repos", JSON.stringify({ at: Date.now(), data }));
-      render(data, "live");
-    } catch (err) {
-      render(FALLBACK, "fallback");
+      repos = await res.json();
+      sessionStorage.setItem("vs-repos", JSON.stringify({ at: Date.now(), data: repos }));
+      syncSource = "live";
+      renderCards();
+    } catch {
+      repos = FALLBACK;
+      syncSource = "fallback";
+      renderCards();
     }
   }
 
-  load();
+  applyLang(lang);
+  loadRepos();
 
   const move = (e) => {
     document.documentElement.style.setProperty("--mx", e.clientX + "px");
