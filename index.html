@@ -9,6 +9,127 @@
 <meta property="og:description" content="Scenography-grade 3D, agent pipelines and verifiable benchmarks. Shipped in public.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#08070c">
+<link rel="canonical" href="https://victorsodre.github.io/">
+<meta name="author" content="Victor Sodré">
+<meta property="og:url" content="https://victorsodre.github.io/">
+<meta property="og:site_name" content="Victor Sodré">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://victorsodre.github.io/assets/avatar.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="400">
+<meta property="og:image:alt" content="Victor Sodré">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@ovictor">
+<meta name="twitter:creator" content="@ovictor">
+<meta name="twitter:title" content="Victor Sodré — code, motion & AI in public">
+<meta name="twitter:description" content="Scenography-grade 3D, agent pipelines and verifiable benchmarks. Shipped in public.">
+<meta name="twitter:image" content="https://victorsodre.github.io/assets/avatar.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://victorsodre.github.io/#victor",
+      "name": "Victor Sodré",
+      "alternateName": "@ovictor",
+      "url": "https://victorsodre.github.io/",
+      "image": "https://victorsodre.github.io/assets/avatar.jpg",
+      "description": "Scenography-grade 3D, agent pipelines and verifiable benchmarks — method, not hype. Building in public.",
+      "knowsAbout": [
+        "Three.js",
+        "WebGL",
+        "Remotion",
+        "AI agents",
+        "Real-time 3D",
+        "Motion design",
+        "Performance benchmarking"
+      ],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Vitória, ES, Brazil"
+      },
+      "sameAs": [
+        "https://x.com/ovictor",
+        "https://github.com/victorsodre",
+        "https://www.npmjs.com/~ovictor"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://victorsodre.github.io/#website",
+      "url": "https://victorsodre.github.io/",
+      "name": "Victor Sodré — code, motion & AI in public",
+      "description": "Code, motion and AI in public — method, not hype. Benchmarks, tools and 3D experiments by @ovictor.",
+      "inLanguage": ["en", "pt-BR"],
+      "publisher": { "@id": "https://victorsodre.github.io/#victor" },
+      "author": { "@id": "https://victorsodre.github.io/#victor" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://victorsodre.github.io/#work",
+      "name": "Public work",
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "remotion-agent-catalog",
+            "url": "https://victorsodre.github.io/remotion-agent-catalog/",
+            "codeRepository": "https://github.com/victorsodre/remotion-agent-catalog",
+            "description": "The missing layer between an agent and a real Remotion project — what already exists, and where it breaks.",
+            "programmingLanguage": "TypeScript",
+            "author": { "@id": "https://victorsodre.github.io/#victor" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "cristo-redentor-threejs",
+            "url": "https://victorsodre.github.io/cristo-redentor-threejs/",
+            "codeRepository": "https://github.com/victorsodre/cristo-redentor-threejs",
+            "description": "Cristo Redentor in Three.js: one scene, no framework, no CDN — 0.47 MB, 11 draw calls, 144 fps measured.",
+            "programmingLanguage": "JavaScript",
+            "author": { "@id": "https://victorsodre.github.io/#victor" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "foryou-composer",
+            "url": "https://victorsodre.github.io/foryou-composer/",
+            "codeRepository": "https://github.com/victorsodre/foryou-composer",
+            "description": "Score your X post against the real For You algorithm — live composer + agent skill.",
+            "programmingLanguage": "JavaScript",
+            "author": { "@id": "https://victorsodre.github.io/#victor" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "threejs-bench",
+            "url": "https://victorsodre.github.io/threejs-bench/",
+            "codeRepository": "https://github.com/victorsodre/threejs-bench",
+            "description": "One prompt, several AI models, zero hand-editing — one-shot Three.js benchmarks you can run in the browser.",
+            "programmingLanguage": "JavaScript",
+            "author": { "@id": "https://victorsodre.github.io/#victor" }
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -463,6 +584,10 @@
         "remotion-agent-catalog": {
           blurb: "The missing layer between an agent and a real Remotion project — what already exists, and where it breaks.",
           cta: "Read the catalog"
+        },
+        "cristo-redentor-threejs": {
+          blurb: "Christ the Redeemer in Three.js — one scene, no framework, no CDN. 0.47 MB, 11 draw calls, 144 fps, all measured in a public gauntlet.",
+          cta: "Open the scene"
         }
       }
     },
@@ -499,6 +624,10 @@
         "remotion-agent-catalog": {
           blurb: "A camada que falta entre um agente e um projeto Remotion de verdade — o que já existe pronto, e onde isso quebra.",
           cta: "Ler o catálogo"
+        },
+        "cristo-redentor-threejs": {
+          blurb: "Cristo Redentor em Three.js — cena única, sem framework e sem CDN. 0,47 MB, 11 draw calls, 144 fps, tudo aferido num gauntlet público.",
+          cta: "Abrir a cena"
         }
       }
     }
@@ -536,14 +665,14 @@
       fork: false, archived: false
     },
     {
-      name: "",
-      html_url: "https://github.com/victorsodre/",
-      homepage: "",
-      description: "Remotion thread (5× 1:1) + Marketing BR catalog for AI agents.",
-      topics: ["agents", "remotion", "video"],
-      created_at: "2026-08-10T03:40:59Z",
-      pushed_at: "2026-08-10T12:54:58Z",
-      fork: false, archived: true
+      name: "cristo-redentor-threejs",
+      html_url: "https://github.com/victorsodre/cristo-redentor-threejs",
+      homepage: "https://victorsodre.github.io/cristo-redentor-threejs/",
+      description: "Cristo Redentor in three.js: one scene, no framework, no CDN — 0.47 MB, 11 draw calls, 144 fps measured.",
+      topics: ["threejs", "webgl", "performance", "procedural"],
+      created_at: "2026-08-18T18:14:22Z",
+      pushed_at: "2026-08-19T23:33:29Z",
+      fork: false, archived: false
     }
   ];
 
