@@ -676,14 +676,14 @@
     }
   ];
 
-  const readStorage = (storage, key) => {
-    try { return storage.getItem(key); } catch { return null; }
+  const readStorage = (name, key) => {
+    try { return window[name].getItem(key); } catch { return null; }
   };
-  const writeStorage = (storage, key, value) => {
-    try { storage.setItem(key, value); } catch { /* preference remains in memory */ }
+  const writeStorage = (name, key, value) => {
+    try { window[name].setItem(key, value); } catch { /* preference remains in memory */ }
   };
 
-  let lang = readStorage(localStorage, LANG_KEY) === "pt" ? "pt" : "en";
+  let lang = readStorage("localStorage", LANG_KEY) === "pt" ? "pt" : "en";
   let repos = FALLBACK;
   let syncSource = "fallback";
 
@@ -753,7 +753,7 @@
 
   function applyLang(next) {
     lang = next;
-    writeStorage(localStorage, LANG_KEY, lang);
+    writeStorage("localStorage", LANG_KEY, lang);
     const pack = I18N[lang];
     document.documentElement.lang = pack.htmlLang;
     document.title = pack.title;
@@ -773,7 +773,7 @@
 
   async function loadRepos() {
     try {
-      const cached = readStorage(sessionStorage, "vs-repos");
+      const cached = readStorage("sessionStorage", "vs-repos");
       if (cached) {
         const { at, data } = JSON.parse(cached);
         if (Date.now() - at < 15 * 60 * 1000) {
@@ -786,7 +786,7 @@
       const res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`);
       if (!res.ok) throw new Error(res.status);
       repos = await res.json();
-      writeStorage(sessionStorage, "vs-repos", JSON.stringify({ at: Date.now(), data: repos }));
+      writeStorage("sessionStorage", "vs-repos", JSON.stringify({ at: Date.now(), data: repos }));
       syncSource = "live";
       renderCards();
     } catch {
