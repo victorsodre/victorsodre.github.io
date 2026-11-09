@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ovictorlab · Experiências interativas e código aberto</title>
+  <meta name="description" content="Explore os projetos de Victor Sodré: engenharia, espaço e natureza em experiências 3D, ferramentas e código aberto. Abra direto no navegador.">
+  <meta name="theme-color" content="#0b0d1a">
+  <meta name="author" content="Victor Sodré">
+  <link rel="canonical" href="https://victorsodre.github.io/">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ovictorlab">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://victorsodre.github.io/">
+  <meta property="og:title" content="ovictorlab · O laboratório aberto">
+  <meta property="og:description" content="Abra, explore e entenda por dentro. Experiências interativas, ferramentas e código de Victor Sodré.">
+  <meta property="og:image" content="https://victorsodre.github.io/assets/projects/itaipu-por-dentro.webp">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Itaipu por dentro: captura real do experimento ovictorlab">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ovictor">
+  <meta name="twitter:title" content="ovictorlab · O laboratório aberto">
+  <meta name="twitter:description" content="Experiências 3D, ferramentas e código aberto. Por Victor Sodré.">
+  <meta name="twitter:image" content="https://victorsodre.github.io/assets/projects/itaipu-por-dentro.webp">
+  <link rel="preload" as="font" href="assets/fonts/anton-latin-400-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">{{SCHEMA}}</script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <svg class="symbol-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="brand-mark" viewBox="0 0 100 100"><path d="M50 12 A38 38 0 1 0 88 50" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="50" cy="50" r="13" fill="currentColor"/></symbol></svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://ovictorlab.com" aria-label="ovictorlab, site principal"><svg aria-hidden="true"><use href="#brand-mark"/></svg><span>ovictorlab</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#projetos" aria-current="page">Projetos</a>
+        <a href="https://ovictorlab.com/videos">Vídeos</a>
+        <a href="#sobre">Sobre</a>
+        <a class="header-link" href="https://ovictorlab.com">Site principal <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><img src="assets/projects/itaipu-scene.webp" alt="" width="1235" height="557" fetchpriority="high"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">O laboratório aberto de Victor Sodré</p>
+        <div class="brand hero-brand"><svg aria-hidden="true"><use href="#brand-mark"/></svg><span>ovictorlab</span></div>
+        <h1 id="hero-title">Abra. Explore.<br /><span>Entenda por dentro.</span></h1>
+        <p class="hero-description">Da água que gera energia à sonda que cruzou a heliosfera. Experiências que você controla, com código para ir além.</p>
+        <div class="hero-actions"><a class="action-primary" href="#projetos">Explorar os projetos <span aria-hidden="true">↓</span></a><a class="action-secondary" href="https://github.com/victorsodre">Ver no GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <a class="hero-caption" href="https://victorsodre.github.io/itaipu-por-dentro/"><span>Em destaque /</span> Itaipu por dentro ↗<small>Explore o caminho da água até a eletricidade</small></a>
+    </section>
+    <div class="container">
+      <div class="intro-strip"><p>Feito para explorar. Aberto para aprender.</p><a href="https://ovictorlab.com/videos">A explicação também está em vídeo ↗</a></div>
+      <section class="catalog section" id="projetos" aria-labelledby="catalog-title">
+        <div class="section-heading"><div><p class="eyebrow">Escolha sua próxima curiosidade</p><h2 id="catalog-title">Entre no laboratório.</h2></div><span class="catalog-note">{{COUNT}} projetos · código público</span></div>
+        <p class="section-description">Interativos de engenharia, espaço e natureza, ao lado das ferramentas e explorações que deram origem ao laboratório.</p>
+        <div id="discovery-controls" class="discovery-controls" hidden>
+          <div class="filters" role="group" aria-label="Categoria de projeto">
+            <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" data-filter="interativo" aria-pressed="false">Interativos</button>
+            <button type="button" data-filter="3d" aria-pressed="false">Explorações 3D</button>
+            <button type="button" data-filter="codigo" aria-pressed="false">Ferramentas e código</button>
+          </div>
+          <label for="search">Buscar projeto<input id="search" type="search" placeholder="Motor, espaço, Three.js…" aria-controls="work"></label>
+        </div>
+        <p id="result-count" class="result-count" role="status">{{COUNT}} projetos</p>
+        <div class="project-grid" id="work">{{PROJECTS}}</div>
+        <div id="empty-state" class="empty-state" hidden><h3>Nenhum projeto encontrado</h3><p>Tente outro termo ou explore todas as categorias.</p><button type="button" class="action-secondary" id="reset">Limpar busca e filtros</button></div>
+      </section>
+      <section class="about section" id="sobre" aria-labelledby="about-title">
+        <img src="assets/avatar.jpg" width="112" height="112" alt="Victor Sodré" loading="lazy">
+        <div><p class="eyebrow">Quem abre as coisas</p><h2 id="about-title">Oi, eu sou o Victor.</h2><p>Transformo perguntas sobre o mundo em explicações visuais, experiências 3D e ferramentas abertas. No ovictorlab, você pode assistir, explorar e conferir como foi feito.</p></div>
+        <a class="text-link" href="https://ovictorlab.com">Conheça o laboratório ↗</a>
+      </section>
+      <section class="closing section" aria-labelledby="closing-title"><p class="eyebrow">A curiosidade continua</p><h2 id="closing-title">Uma pergunta leva a outra.</h2><p>Acompanhe os vídeos, as novas experiências e os bastidores.</p><div class="hero-actions"><a class="action-primary" href="https://www.youtube.com/@ovictorlab">YouTube ↗</a><a class="action-secondary" href="https://www.instagram.com/ovictorlab/">Instagram ↗</a><a class="text-link" href="https://x.com/ovictor">X / @ovictor ↗</a></div></section>
+    </div>
+  </main>
+  <footer class="container"><a class="brand" href="https://ovictorlab.com"><svg aria-hidden="true"><use href="#brand-mark"/></svg><span>ovictorlab</span></a><p>© {{YEAR}} Victor Sodré · Fontes, limites e créditos em cada projeto.</p><a href="https://ovictorlab.com/marcas">Contato ↗</a></footer>
+</body>
+</html>

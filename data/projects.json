@@ -1,0 +1,345 @@
+{
+  "source": "https://ovictorlab.com/codigo",
+  "verifiedAt": "2026-11-08",
+  "projects": [
+    {
+      "slug": "itaipu-por-dentro",
+      "name": "Itaipu por dentro",
+      "kind": "interativo",
+      "topic": "Energia",
+      "summary": "Siga a água, abra a turbina e descubra de onde vem a eletricidade.",
+      "story": [
+        "Controle a vazão e acompanhe os caminhos separados da geração e do vertedouro. O corte é educativo, sem escala e sem geometria de engenharia para construção.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/itaipu-por-dentro/",
+      "repoUrl": "https://github.com/victorsodre/itaipu-por-dentro",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/itaipu-por-dentro.webp",
+      "imageAlt": "Captura real da experiência Itaipu por dentro"
+    },
+    {
+      "slug": "voyager",
+      "name": "Voyager 1",
+      "kind": "interativo",
+      "topic": "Espaço",
+      "summary": "Gire a sonda da NASA e explore os instrumentos que viajaram além da heliosfera.",
+      "story": [
+        "Selecione e isole os conjuntos do modelo oficial da NASA / Michael D. Carbajal. Uma vista separada reúne os marcos da viagem; distâncias e tempo não estão em escala.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/voyager/",
+      "repoUrl": "https://github.com/victorsodre/voyager",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/voyager.webp",
+      "imageAlt": "Captura real da experiência Voyager 1"
+    },
+    {
+      "slug": "caminhao-lixo",
+      "name": "Caminhão de lixo",
+      "kind": "interativo",
+      "topic": "Engenharia",
+      "summary": "Abra a carroceria e acompanhe um ciclo de compactação, passo a passo.",
+      "story": [
+        "Explore um coletor de carregamento traseiro, identifique as peças e controle as etapas da compactação. A geometria e o mecanismo são uma representação educativa.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/caminhao-lixo/",
+      "repoUrl": "https://github.com/victorsodre/caminhao-lixo",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/caminhao-lixo.webp",
+      "imageAlt": "Captura real da experiência Caminhão de lixo"
+    },
+    {
+      "slug": "oleoduto",
+      "name": "Oleoduto",
+      "kind": "interativo",
+      "topic": "Energia",
+      "summary": "Veja como gasolina e diesel percorrem o mesmo tubo e chegam ao terminal.",
+      "story": [
+        "Avance dois lotes, observe a região de interface e acompanhe a separação no recebimento. O modelo explica o processo; não é um simulador de operação.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/oleoduto/",
+      "repoUrl": "https://github.com/victorsodre/oleoduto",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/oleoduto.webp",
+      "imageAlt": "Captura real da experiência Oleoduto"
+    },
+    {
+      "slug": "tatuzao",
+      "name": "Tatuzão",
+      "kind": "interativo",
+      "topic": "Engenharia",
+      "summary": "Escave o solo e monte um anel do túnel, uma etapa de cada vez.",
+      "story": [
+        "Acompanhe escavação, transporte de material e instalação do revestimento em uma tuneladora. O ciclo é ilustrativo e identifica a variante de máquina representada.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/tatuzao/",
+      "repoUrl": "https://github.com/victorsodre/tatuzao",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/tatuzao.webp",
+      "imageAlt": "Captura real da experiência Tatuzão"
+    },
+    {
+      "slug": "motor-por-dentro",
+      "name": "Motor por dentro",
+      "kind": "interativo",
+      "topic": "Engenharia",
+      "summary": "Controle os quatro tempos e descubra como o pistão faz o eixo girar.",
+      "story": [
+        "Um cilindro, válvulas, pistão, biela e virabrequim mostram admissão, compressão, combustão e escape. Selecione e desmonte os conjuntos de um motor quatro tempos.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/motor-por-dentro/",
+      "repoUrl": "https://github.com/victorsodre/motor-por-dentro",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/motor-por-dentro.webp",
+      "imageAlt": "Captura real da experiência Motor por dentro"
+    },
+    {
+      "slug": "amazonas-em-camadas",
+      "name": "Amazonas em camadas",
+      "kind": "interativo",
+      "topic": "Natureza",
+      "summary": "Retire a água da vista e explore um corte do rio na região de Óbidos.",
+      "story": [
+        "Alterne as camadas de água, leito e subsolo. O projeto distingue localização geográfica e esquema ilustrativo; não apresenta o corte como batimetria medida.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/amazonas-em-camadas/",
+      "repoUrl": "https://github.com/victorsodre/amazonas-em-camadas",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/amazonas-em-camadas.webp",
+      "imageAlt": "Captura real da experiência Amazonas em camadas"
+    },
+    {
+      "slug": "radar-placas",
+      "name": "Como uma placa é lida",
+      "kind": "interativo",
+      "topic": "Tecnologia",
+      "summary": "Da foto às letras: acompanhe captura, recorte e leitura de uma placa fictícia.",
+      "story": [
+        "Explore o caminho da imagem até uma sequência de caracteres e veja falhas ilustrativas. A leitura é uma demonstração local, sem consulta a dados de veículos.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/radar-placas/",
+      "repoUrl": "https://github.com/victorsodre/radar-placas",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/radar-placas.webp",
+      "imageAlt": "Captura real da experiência Como uma placa é lida"
+    },
+    {
+      "slug": "motor-navio",
+      "name": "Motor de navio",
+      "kind": "interativo",
+      "topic": "Engenharia",
+      "summary": "Do pistão à hélice: explore o mecanismo de um motor naval gigante.",
+      "story": [
+        "Um corte do Wärtsilä RT-flex96C de 14 cilindros explica pistão, cruzeta, biela e transmissão direta. Movimentos e proporções têm finalidade educativa.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/motor-navio/",
+      "repoUrl": "https://github.com/victorsodre/motor-navio",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/motor-navio.webp",
+      "imageAlt": "Captura real da experiência Motor de navio"
+    },
+    {
+      "slug": "ponte-sob-carga",
+      "name": "Ponte sob carga",
+      "kind": "interativo",
+      "topic": "Engenharia",
+      "summary": "Mova o veículo e compare como a ponte se deforma sob a carga.",
+      "story": [
+        "Observe apoios, tabuleiro e caminho das forças em uma única tipologia. A deformação é ampliada e comparada à forma original; não é ferramenta de dimensionamento.",
+        "A experiência abre direto no navegador, com controles para explorar e vídeo do canal para continuar a explicação. O código e as fontes estão no repositório."
+      ],
+      "stack": [
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/ponte-sob-carga/",
+      "repoUrl": "https://github.com/victorsodre/ponte-sob-carga",
+      "updatedAt": "2026-11-08",
+      "image": "/img/projects/ponte-sob-carga.webp",
+      "imageAlt": "Captura real da experiência Ponte sob carga"
+    },
+    {
+      "slug": "maquete",
+      "name": "maquete",
+      "kind": "3d",
+      "summary": "Qualquer lugar do mundo vira uma maquete em lâminas, terra e fundo do mar, com luz de estúdio no navegador e SVG para cortar.",
+      "story": [
+        "Um comando baixa dado aberto (Copernicus DEM na terra, GMRT no mar), corta o relevo em lâminas de 3 mm e monta a maquete em Three.js: compensado, cartão ou gesso, mar em azuis por profundidade e uma placa de acrílico que levanta para mostrar o fundo.",
+        "Sem chave de API e sem build. Os mesmos contornos saem em SVG, um por lâmina, prontos para laser ou para recortar em papel.",
+        "Cada peça declara a escala, o exagero e quanto do fundo do mar foi medido por sonar."
+      ],
+      "stack": [
+        "Node 22",
+        "Three.js",
+        "d3-contour",
+        "GeoTIFF",
+        "Playwright"
+      ],
+      "liveUrl": "https://victorsodre.github.io/maquete/?lugar=rio",
+      "repoUrl": "https://github.com/victorsodre/maquete",
+      "updatedAt": "2026-10-26"
+    },
+    {
+      "slug": "judg3d",
+      "name": "judg3d",
+      "kind": "ferramenta",
+      "summary": "Checagem de aceite local para arquivos glTF/GLB: veredito, violações acionáveis, métricas e hashes.",
+      "story": [
+        "Um asset e um perfil versionado geram um veredito com violações que dá para corrigir, métricas e cobertura explícita.",
+        "A validação de formato usa o glTF Validator oficial da Khronos. Tem CLI, servidor MCP, app local e uma GitHub Action reaproveitável."
+      ],
+      "stack": [
+        "TypeScript",
+        "Node 22",
+        "Vitest",
+        "GitHub Actions",
+        "MCP"
+      ],
+      "repoUrl": "https://github.com/victorsodre/judg3d",
+      "packageUrl": "https://www.npmjs.com/package/judg3d",
+      "updatedAt": "2026-10-13"
+    },
+    {
+      "slug": "remotion-agent-catalog",
+      "name": "remotion-agent-catalog",
+      "kind": "catalogo",
+      "summary": "A camada que falta entre um agente e um projeto Remotion de verdade: o que já existe e onde quebra.",
+      "story": [
+        "As skills oficiais ensinam como escrever Remotion. Este catálogo responde o que já existe, de onde veio cada peça e onde cada uma quebra.",
+        "Catálogo ao vivo, em português e inglês, com servidor MCP para o agente consultar antes da primeira linha."
+      ],
+      "stack": [
+        "React",
+        "Remotion",
+        "TypeScript",
+        "MCP"
+      ],
+      "liveUrl": "https://victorsodre.github.io/remotion-agent-catalog/",
+      "repoUrl": "https://github.com/victorsodre/remotion-agent-catalog",
+      "updatedAt": "2026-10-05"
+    },
+    {
+      "slug": "fusquinha",
+      "name": "Fusquinha",
+      "kind": "3d",
+      "summary": "Um Fusca amarelinho para explorar em 3D, com desmontagem progressiva de 515 elementos.",
+      "story": [
+        "Órbita, zoom, seleção de conjuntos e peças, isolamento, malha, captura de imagem e desmontagem peça por peça.",
+        "Direção visual de garagem brasileira: azulejo verde, cobogó, parede de cal. Modelo original de Rodrigo Marini, reinterpretado."
+      ],
+      "stack": [
+        "React",
+        "Three.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "liveUrl": "https://victorsodre.github.io/fusquinha/",
+      "repoUrl": "https://github.com/victorsodre/fusquinha",
+      "updatedAt": "2026-09-06"
+    },
+    {
+      "slug": "cristo-redentor",
+      "name": "Cristo Redentor",
+      "kind": "3d",
+      "summary": "O Cristo no alto do Corcovado, com relógio de 0 a 24 h e o dia inteiro passando em 24 segundos.",
+      "story": [
+        "Página única e autocontida: órbita com mouse ou dedo, controle de hora, modo ciclo e HUD de desempenho à vista.",
+        "Link profundo: quem compartilha a URL entrega exatamente a vista que estava vendo. Sem framework, sem bundler, sem CDN."
+      ],
+      "stack": [
+        "Three.js",
+        "JavaScript"
+      ],
+      "liveUrl": "https://victorsodre.github.io/cristo-redentor-threejs/",
+      "repoUrl": "https://github.com/victorsodre/cristo-redentor-threejs",
+      "updatedAt": "2026-10-05"
+    },
+    {
+      "slug": "threejs-bench",
+      "name": "threejs-bench",
+      "kind": "benchmark",
+      "summary": "Um prompt, vários modelos de IA, zero edição à mão: cenas 3D publicadas com os defeitos que vieram.",
+      "story": [
+        "Cada modelo recebe o mesmo prompt, uma única vez, e precisa entregar um HTML com Three.js. Sem agente, sem nova tentativa, sem limpeza depois.",
+        "O que o modelo entrega é o que vai ao ar, e o tempo de geração fica registrado."
+      ],
+      "stack": [
+        "Three.js",
+        "HTML único"
+      ],
+      "liveUrl": "https://victorsodre.github.io/threejs-bench/bench/",
+      "repoUrl": "https://github.com/victorsodre/threejs-bench",
+      "updatedAt": "2026-10-05"
+    },
+    {
+      "slug": "foryou-composer",
+      "name": "For You Composer",
+      "kind": "ferramenta",
+      "summary": "Um assistente de rascunho para posts no X, com heurísticas inspiradas no código público de recomendação.",
+      "story": [
+        "Escreva e revise um post com critérios explícitos. As notas são heurísticas: não reproduzem o sistema em produção nem garantem alcance."
+      ],
+      "stack": [
+        "JavaScript",
+        "HTML"
+      ],
+      "liveUrl": "https://victorsodre.github.io/foryou-composer/",
+      "repoUrl": "https://github.com/victorsodre/foryou-composer",
+      "updatedAt": "2026-09-07"
+    }
+  ]
+}
